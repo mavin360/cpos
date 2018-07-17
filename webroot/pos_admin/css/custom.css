@@ -36,3 +36,12 @@
 	font-size: 21px;
 	line-height: 26px;
 }
+.add-btn,.roles{
+	text-align:center;
+}
+
+.roles a{
+	text-align:center;
+	display:inline-block;
+	width: 100%;
+}

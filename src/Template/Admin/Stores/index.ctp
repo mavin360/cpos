@@ -24,7 +24,7 @@
 					<td><?php echo wordwrap($Store['store_address'],20,"</br>"); ?></td>
 					<td><?php echo $Store['store_phone']; ?></td>
 					<td><?php echo $Store['store_email']; ?></td>
-					<td><?php $Store['status']; ?>
+					<td><?php //$Store['status']; ?>
 						<?php if($Store['status']=='Active') {?>
 				<div class="toggles toggle-success" data-toggle-on="true" data-toggle-height="20" data-toggle-width="60" data-id="<?= $Store['id']; ?>"></div>
 				<?php }else{?>

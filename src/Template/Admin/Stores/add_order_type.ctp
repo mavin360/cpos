@@ -15,15 +15,10 @@
 			<div class="form-group col-sm-12">
 			<label class="col-sm-3 control-label">Order Type</label>
 			<div class="col-sm-9">
-				<?php echo $this->Form->radio('order_type',[['value'=>'in_store','text'=>'  In Store'],['value'=>'out_store','text'=>'  Out Store']],['label' => ['style' =>'padding:10px'],'value'=>'in_store']);?>
+				<?php echo $this->Form->radio('order_type',[['value'=>'Pickup','text'=>'  Pickup'],['value'=>'Deliverty','text'=>'  Deliverty'],['value'=>'Dining','text'=>'  Dining']],['label' => ['style' =>'padding:10px'],'value'=>'in_store']);?>
 			</div>
 			</div>
-			<div class="form-group col-sm-12">
-			<label class="col-sm-3 control-label">Surcharge</label>
-			<div class="col-sm-9">
-			 <?php echo $this->Form->input('surcharge', array('label'=>false,'class'=>'form-control','type'=>'textarea')); ?>
-		   </div>
-		</div>
+	
 		
 	</div>
 	<div class="col-sm-6">

@@ -89,7 +89,7 @@
 <script>
 function addOrdTyp()
 {
-	$.get('<?php echo $this->request->webroot;?>admin/stores/add-order-type',function(data){
+	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/add-order-type',function(data){
 			  $('#add_popup').find('#cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Add Order Type');
@@ -98,7 +98,7 @@ function addOrdTyp()
 
 function editOrdTyp(id)
 {
-	$.get('<?php echo $this->request->webroot;?>admin/stores/edit-order-type/'+id,function(data){
+	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/edit-order-type/'+id,function(data){
 			  $('#add_popup').find('#cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Edit Order Type');

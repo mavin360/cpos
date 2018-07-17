@@ -37,10 +37,10 @@ class UsersTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-       /*$this->belongsTo('Roles', [
+       $this->belongsTo('UserRoles', [
             'foreignKey' => 'role_id',
             'joinType' => 'INNER'
-        ]);*/
+        ]);
     }
 
     /**

@@ -128,11 +128,173 @@ class UsersController extends AppController
 	
 	/* ============Users And Role Management.============= */
 	
-	public function index(){
-		
-		
+	public function index($rid=null){
+		$UserRoles= TableRegistry::get('UserRoles');
+		$allRoles=$UserRoles->find()
+		//->contain(['Acls'])
+		->where(['UserRoles.role_status'=>'Active']);
+		$users=$this->Users->find()->contain(['UserRoles']);
+		if($rid){
+			$users->where(['Users.role_id'=>$rid]);
+		}
+		$users = $this->Paginator->paginate($users);
+		$this->set(compact('allRoles','users'));
+	}
+	
+	public function changeStatus(){
+		$id=$this->request->getData('id');
+		$Users=TableRegistry::get('Users');
+		if($id){
+			$User=$Users->get($id);
+			$User->status=$this->request->getData('status');
+			if($Users->save($User)){
+				$out=['status'=>'success'];
+				echo json_encode($out);
+			}
+		}
+		die;
+	}
+	public function addRole(){
+		if($this->request->getParam('isAjax')==1){
+			$this->viewBuilder()->setLayout('ajax');
+		}else{
+			$this->viewBuilder()->setLayout('admin');
+		}
+		$UserRoles= TableRegistry::get('UserRoles');
+		$userRole=$UserRoles->newEntity();
+		$this->set(compact('userRole'));
 	}
 	
 	
+	public function saveRole(){
+		$UserRoles= TableRegistry::get('UserRoles');
+		$userRole=$UserRoles->newEntity();
+		 /*$controllers = $this->getControllers();
+			$resources = [];
+			foreach($controllers as $controller){
+				$actions[$controller] = $this->getActions($controller);
+				$resources=$actions;
+			}
+		*/
+		if ($this->request->is(['patch', 'post', 'put'])){
+			//if(empty($this->request->data['module'])){
+				
+			//}else{
+				$this->request->data['role_status']='Active';
+				$this->request->data['added_by']=$this->Auth->user('id');
+				$this->request->data['added_date']=date('Y-m-d H:i:s');
+				$this->request->data['modify_date']=date('Y-m-d H:i:s');
+				$userRole=$UserRoles->patchEntity($userRole,$this->request->getData());
+				if($UserRoles->save($userRole)){
+					/*$role_id=$userRole->user_role_id;
+					foreach($this->request->data['module'] as $key=>$modules){
+						foreach($modules as $module){
+							$Acls=TableRegistry::get('Acls');
+							$acl=$Acls->newEntity();
+							$data['controller_name']=$key;
+							$data['action_name']=$module;
+							$data['user_role_id']=$role_id;
+							$data['added_date']=date('Y-m-d H:i:s');
+							$data['added_by']=$this->Auth->user('id');
+							$acl=$Acls->patchEntity($acl,$data);
+							$Acls->save($acl);
+						}
+					}*/
+					$out=['status'=>'success','msg'=>'User role has been Saved'];
+					echo json_encode($out);
+				}else{
+					$out=['status'=>'error','msg'=>'An Internal error,please try again'];
+					echo json_encode($out);
+				}
+			//}
+			
+			die;
+		}
+	}
 	
+	public function add(){
+		if($this->request->getParam('isAjax')==1){
+			$this->viewBuilder()->setLayout('ajax');
+		}else{
+			$this->viewBuilder()->setLayout('admin');
+		}
+		$user=$this->Users->newEntity();
+		$UserRoles= TableRegistry::get('UserRoles');
+		$Stores= TableRegistry::get('Stores');
+		$allRoles=$UserRoles->find('list',['keyField' => 'id','valueField' =>'role_name'])->where(['UserRoles.role_status'=>'Active']);
+		$stores=$Stores->find('list',['keyField' => 'id','valueField' =>'store_name'])->toArray();
+		$this->set(compact('allRoles','user','stores'));
+	}
+	
+	public function edit($id){
+		if($this->request->getParam('isAjax')==1){
+			$this->viewBuilder()->setLayout('ajax');
+		}else{
+			$this->viewBuilder()->setLayout('admin');
+		}
+		$user=$this->Users->get($id);
+		$UserRoles= TableRegistry::get('UserRoles');
+		$Stores= TableRegistry::get('Stores');
+		$allRoles=$UserRoles->find('list',['keyField' => 'id','valueField' =>'role_name'])->where(['UserRoles.role_status'=>'Active']);
+		$stores=$Stores->find('list',['keyField' => 'id','valueField' =>'store_name'])->toArray();
+		$this->set(compact('allRoles','user','stores'));
+	}
+	
+	public function save(){
+		
+		if ($this->request->is(['patch', 'post', 'put'])){
+			$existUser=$this->Users->find()->where(['email'=>$this->request->getData('email')])->first();
+			if($existUser->id){
+				$out=['status'=>'emailerror','msg'=>'This email already Used'];
+				echo json_encode($out);die;
+			}
+			
+			$user=$this->Users->newEntity();
+			if($this->request->getData('profile_image.name')){
+				$uploadImage=$this->Image->upload_image_and_thumbnail($this->request->getData('profile_image'),700,500,200,250,'profile-images');
+				$this->request->data['profile_image']=$uploadImage;
+			}
+			$this->request->data['added_date']=date('Y-m-d H:i:s');
+			$this->request->data['modified_date']=date('Y-m-d H:i:s');
+			$this->request->data['added_by']=$this->Auth->user('id');
+			$this->request->data['status']='Active';
+			$this->request->data['is_deleted']=0;
+			$user=$this->Users->patchEntity($user,$this->request->getData());
+			if($this->Users->save($user)){
+				$out=['status'=>'success','msg'=>'User has been Saved'];
+				echo json_encode($out);
+			}else{
+				$out=['status'=>'error','msg'=>'An Internal error,please try again'];
+				echo json_encode($out);
+			}
+		}
+		
+		die;
+	}
+	public function saveEdit(){
+		
+		if ($this->request->is(['patch', 'post', 'put'])){
+			$existUser=$this->Users->find()->where(['email'=>$this->request->getData('email'),'id !='=>$this->request->getData('id')])->first();
+			if($existUser->id){
+				$out=['status'=>'emailerror','msg'=>'This email already Used'];
+				echo json_encode($out);die;
+			}
+			
+			$user=$this->Users->get($this->request->getData('id'));
+			if($this->request->getData('profile_image.name')){
+				$uploadImage=$this->Image->upload_image_and_thumbnail($this->request->getData('profile_image'),700,500,200,250,'profile-images');
+				$this->request->data['profile_image']=$uploadImage;
+			}
+			$this->request->data['modified_date']=date('Y-m-d H:i:s');
+			$user=$this->Users->patchEntity($user,$this->request->getData());
+			if($this->Users->save($user)){
+				$out=['status'=>'success','msg'=>'User has been Saved'];
+				echo json_encode($out);
+			}else{
+				$out=['status'=>'error','msg'=>'An Internal error,please try again'];
+				echo json_encode($out);
+			}
+		}
+		die;
+	}
 }
