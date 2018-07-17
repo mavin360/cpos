@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="assets/images/favicon.ico">
+<title>cPOS - Cloud POS</title>
+
+<!--Morris Chart CSS -->
+<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+
+<!-- App css -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+
+<!-- HTML5 Shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<script src="assets/js/modernizr.min.js"></script>
+</head>
+
+<body>
+
+<!-- Begin page -->
+
+
+
+<div class="wrapper-page">
+
+<div class="topbar">
+
+<!-- LOGO -->
+
+
+<!-- Button mobile view to collapse sidebar menu -->
+<div class="navbar navbar-default" role="navigation">
+<div class="container">
+
+
+<ul class="nav navbar-nav navbar-left">
+<li>
+<button class="button-menu-mobile open-left">
+<i class="zmdi zmdi-menu"></i>
+</button>
+</li>
+<li>
+<form class="form-horizontal" action="index.html">
+<button class="btn btn-default btn-bordred waves-effect btn-sm m-b-5">Dashboard</button>
+</form>
+</li>
+</ul>
+
+<!-- Right(Notification and Searchbox -->
+
+
+</div><!-- end container -->
+</div><!-- end navbar -->
+</div>
+
+
+<div class="m-t-40 card-box">
+<div class="text-center">
+<h4 class="text-uppercase font-bold m-b-0">Customer Phone Number</h4>
+</div>
+<div class="panel-body">
+<form class="form-horizontal m-t-20" action="#">
+
+<div class="form-group ">
+<div class="col-xs-12">
+<input class="form-control" type="text" required="" placeholder="Phone Number">
+</div>
+</div>
+
+<div class="form-group text-center m-t-30">
+<div class="col-xs-12">
+<button class="btn btn-primary btn-bordred btn-block waves-effect waves-light" type="submit">Get Customer Details</button>
+</div>
+</div>
+</form>
+
+</div>
+
+</div>
+<div class="m-b-30">
+<button class="btn btn-primary waves-effect waves-light" data-toggle="modal" data-target="#add-new-customer">Add New Customer</button>
+</div>
+
+<div class="card-box">
+<div class="dropdown pull-right">
+<a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+<i class="zmdi zmdi-more-vert"></i></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="#">Edit</a></li>
+<li><a href="#">Delete</a></li>
+<li><a href="#">Block</a></li>
+</ul>
+</div>
+
+<div>
+<h4 class="header-title m-t-0  m-b-0">Customer Details</h4>
+<h2>Ritesh Kapoor</h2>
+<p class="text-muted font-13"><strong>Mobile :</strong><span class="m-l-15">(123) 123 1234</span></p>
+<p class="text-muted font-13"><strong>Email :</strong> <span class="m-l-15">ritesh@gmail.com</span></p>
+<p class="text-muted font-13"><strong>Country :</strong> <span class="m-l-15">Dubai</span></p>
+<p class="text-muted font-13"><strong>Address :</strong> <span class="m-l-15">Belvedere Building, Dubai - United Arab Emirates</span></p>
+</div>
+
+</div>
+<div class="card-box">
+
+<h4 class="header-title m-t-0 m-b-0">Store Details</h4>
+<address>
+<h2>Marina</h2>
+795 Folsom Ave, Suite 600
+<br>
+San Francisco, CA 94107
+<br>
+<abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+<form class="form-horizontal m-t-20" action="pos-order.html">
+
+<button class="btn btn-success waves-effect waves-light btn-lg m-b-5" type="submit">Pickup</button>
+<button  class="btn btn-success waves-effect waves-light btn-lg m-b-5" type="submit">Delivery</button>
+
+</form>
+</div>
+
+</div>
+
+
+<script>
+var resizefunc = [];
+</script> 
+
+<div id="order-type" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h4 class="modal-title">Select Pickup Or Delivery</h4>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div id="add-new-customer" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+<h4 class="modal-title">Add New Customer</h4>
+</div>
+<div class="modal-body">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+<label for="field-1" class="control-label">Name</label>
+<input type="text" class="form-control" id="field-1" placeholder="John">
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+<label for="field-2" class="control-label">Surname</label>
+<input type="text" class="form-control" id="field-2" placeholder="Doe">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="field-3" class="control-label">Phone Number</label>
+<input type="text" class="form-control" id="field-3" placeholder="Phone Number">
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-12">
+<div class="form-group">
+<label for="field-3" class="control-label">Address</label>
+<input type="text" class="form-control" id="field-3" placeholder="Address">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="form-group">
+<label for="field-4" class="control-label">City</label>
+<input type="text" class="form-control" id="field-4" placeholder="Boston">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="field-5" class="control-label">Country</label>
+<input type="text" class="form-control" id="field-5" placeholder="United States">
+</div>
+</div>
+<div class="col-md-4">
+<div class="form-group">
+<label for="field-6" class="control-label">Zip</label>
+<input type="text" class="form-control" id="field-6" placeholder="123456">
+</div>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+<button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
+</div>
+</div>
+</div>
+</div><!-- /.modal -->
+
+<!-- jQuery  --> 
+<script src="assets/js/jquery.min.js"></script> 
+<script src="assets/js/bootstrap.min.js"></script> 
+<script src="assets/js/detect.js"></script> 
+<script src="assets/js/fastclick.js"></script> 
+<script src="assets/js/jquery.blockUI.js"></script> 
+<script src="assets/js/waves.js"></script> 
+<script src="assets/js/jquery.nicescroll.js"></script> 
+<script src="assets/js/jquery.slimscroll.js"></script> 
+<script src="assets/js/jquery.scrollTo.min.js"></script> 
+
+<!-- KNOB JS --> 
+<!--[if IE]>
+<script type="text/javascript" src="assets/plugins/jquery-knob/excanvas.js"></script>
+<![endif]--> 
+<script src="assets/plugins/jquery-knob/jquery.knob.js"></script> 
+
+<!--Morris Chart--> 
+<script src="assets/plugins/morris/morris.min.js"></script> 
+<script src="assets/plugins/raphael/raphael-min.js"></script> 
+
+<!-- Dashboard init --> 
+<script src="assets/pages/jquery.dashboard.js"></script> 
+
+<!-- App js --> 
+<script src="assets/js/jquery.core.js"></script> 
+<script src="assets/js/jquery.app.js"></script>
+</body>
+</html>

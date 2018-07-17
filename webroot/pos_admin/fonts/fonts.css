@@ -1,0 +1,194 @@
+
+
+@font-face {
+    font-family: 'latobold';
+    src: url('lato-bold-webfont.woff2') format('woff2'),
+         url('lato-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'Papyrus';
+	src: url('Papyrus-Regular.eot');
+	src: url('Papyrus-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Papyrus-Regular.woff') format('woff'),
+		url('Papyrus-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Parisien Night';
+	src: url('ParisienNight.eot');
+	src: url('ParisienNight.eot?#iefix') format('embedded-opentype'),
+		url('ParisienNight.woff') format('woff'),
+		url('ParisienNight.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family:'SegoeUI-Semibold';
+	src: url('SegoeUI-Semibold_gdi.eot');
+	src: url('SegoeUI-Semibold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI-Semibold_gdi.woff') format('woff'),
+		url('SegoeUI-Semibold_gdi.ttf') format('truetype'),
+		url('SegoeUI-Semibold_gdi.otf') format('opentype'),
+		url('SegoeUI-Semibold_gdi.svg#SegoeUI-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-2666;
+}
+
+@font-face {
+	font-family: 'Parisian';
+	src: url('Parisian.eot');
+	src: url('Parisian.eot?#iefix') format('embedded-opentype'),
+		url('Parisian.woff') format('woff'),
+		url('Parisian.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family:'SegoeUI-Bold';
+	src: url('SegoeUI-Bold_gdi.eot');
+	src: url('SegoeUI-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI-Bold_gdi.woff') format('woff'),
+		url('SegoeUI-Bold_gdi.ttf') format('truetype'),
+		url('SegoeUI-Bold_gdi.otf') format('opentype'),
+		url('SegoeUI-Bold_gdi.svg#SegoeUI-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+	font-stretch: normal;
+	unicode-range: U+000D-02DC;
+}
+
+@font-face {
+    font-family: 'segoe_uiregular';
+    src: url('5834388143-webfont.eot');
+    src: url('5834388143-webfont.eot?#iefix') format('embedded-opentype'),
+         url('5834388143-webfont.woff') format('woff'),
+         url('5834388143-webfont.ttf') format('truetype'),
+         url('5834388143-webfont.svg#segoe_uiregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latoregular';
+    src: url('lato-regular-webfont.woff2') format('woff2'),
+         url('lato-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'latothin';
+    src: url('lato-thin-webfont.woff2') format('woff2'),
+         url('lato-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'Segoe UI Semilight';
+	src: url('SegoeUI-SemilightItalic.eot');
+	src: url('SegoeUI-SemilightItalic.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI-SemilightItalic.woff') format('woff'),
+		url('SegoeUI-SemilightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+
+@font-face {
+	font-family: 'Segoe UI Semilight';
+	src: url('SegoeUI-Semilight.eot');
+	src: url('SegoeUI-Semilight.eot?#iefix') format('embedded-opentype'),
+		url('SegoeUI-Semilight.woff') format('woff'),
+		url('SegoeUI-Semilight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'open_sanssemibold';
+    src: url('opensans-semibold-webfont.eot');
+    src: url('opensans-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-semibold-webfont.woff2') format('woff2'),
+         url('opensans-semibold-webfont.woff') format('woff'),
+         url('opensans-semibold-webfont.ttf') format('truetype'),
+         url('opensans-semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'open_sanslight';
+    src: url('opensans-light-webfont.eot');
+    src: url('opensans-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('opensans-light-webfont.woff2') format('woff2'),
+         url('opensans-light-webfont.woff') format('woff'),
+         url('opensans-light-webfont.ttf') format('truetype'),
+         url('opensans-light-webfont.svg#open_sanslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+	font-family: 'Muli';
+	src: url('Muli-Bold.eot');
+	src: url('Muli-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Muli-Bold.woff') format('woff'),
+		url('Muli-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Remachine Script Personal Use';
+	src: url('RemachineScriptPersonalUseOnly.eot');
+	src: url('RemachineScriptPersonalUseOnly.eot?#iefix') format('embedded-opentype'),
+		url('RemachineScriptPersonalUseOnly.woff') format('woff'),
+		url('RemachineScriptPersonalUseOnly.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('MyriadPro-Regular.eot');
+	src: url('MyriadPro-Regular.eot?#iefix') format('embedded-opentype'),
+		url('MyriadPro-Regular.woff') format('woff'),
+		url('MyriadPro-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'kameronregular';
+    src: url('kameron-regular-webfont.woff2') format('woff2'),
+         url('kameron-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+	font-family: 'DK Bocadillo';
+	src: url('DKBocadillo-Regular.eot');
+	src: url('DKBocadillo-Regular.eot?#iefix') format('embedded-opentype'),
+		url('DKBocadillo-Regular.woff') format('woff'),
+		url('DKBocadillo-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

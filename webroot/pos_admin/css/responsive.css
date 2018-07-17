@@ -1,0 +1,180 @@
+@media (min-width: 992px) and (max-width: 1199px) {
+  .homeslider iframe{ height: 350px;}
+  .fashion_container .textbox{ height: 203px;}
+  .whyus_sec{ padding: 50px 0;}
+  .product_sec .box p span{ margin: 0 2px;}
+  .product_sec{ padding: 30px 0 50px;}
+  .new_carowsel{ padding: 30px 0 10px;}
+  .owl-carousel.slider3 iframe,
+  .owl-carousel.slider4 iframe{ width: 320px;}
+
+  .owl-carousel .owl-prev{ left: -80px;}
+  .owl-carousel .owl-next{ right: -80px;}
+
+  footer .cards li a{ width: 50px; height: 34px; background-size: 335px;}
+  footer .cards li .master{ background-position: -57px 0px;}
+  footer .cards li .american{ background-position: -114px 0;}
+  footer .cards li .discover{ background-position: -171px 0;}
+  footer .cards li .rupay{ background-position: -228px 0;}
+  footer .cards li .paypal{ background-position: -285px 0;}
+
+  .prodetail_sec .filterbox .bagbtn{ width: 160px;}
+  .cart_listing .price{ flex: 1.5; font-size: 18px;}
+  .cart_listing .info h3{ font-size: 16px; line-height: 20px;}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  header{ padding: 15px 0;}
+  header nav ul li{ margin-right: 20px;}
+  header .searchbox input{ width: 110px; height: 20px;}
+  .right_header li{ padding: 0 5px;}
+  .homeslider{ padding: 25px 0;}
+  .homeslider h3{ font-size: 16px; line-height: 20px;}
+  .homeslider p{ line-height: 18px;}
+  .owl-carousel.slider2 iframe{ width: 300px;}
+
+  .owl-carousel .owl-prev{ background-size: 50px; width: 50px; height: 50px; left: -65px;}
+  .owl-carousel .owl-next{ background-size: 50px; width: 50px; height: 50px; right: -65px;}
+
+  .whyus_sec h3{ font-size: 18px; line-height: 25px;}
+  .whyus_sec{ padding: 40px 0;}
+  .fashion_container .textbox{ font-size: 16px; line-height: 20px; padding: 10px; height: 150px; margin-bottom: 20px;}
+  .product_sec{ padding: 30px 10px;}
+  .product_sec .box{ padding: 0 5px;}
+  .new_carowsel{ padding: 20px 0 0;}
+  h3.subtitle{ margin: 0 0 20px;}
+
+  .category_sec .box ul li a{ font-size: 11px; line-height: 15px;}
+  .category_sec .box ul li{ margin-bottom: 5px;}
+  footer{ padding: 10px 0;}
+  footer p{ margin-bottom: 10px; font-size: 13px; text-align: center;}
+  footer .text-right{ text-align: center;}
+
+  .column_thumbnails{ float: left; width: 100%; padding: 0 5px; margin: 0 0 10px;}
+  .column_thumbnails li{ float: left; width: 33.33%;}
+  .column_thumbnails li a{ padding:5px 5px;}
+
+  .bx-wrapper .bx-controls-direction .bx-prev{ left: 10px; top: 50%; margin: -16px 0 0; transform: none;}
+  .bx-wrapper .bx-controls-direction .bx-next{ right: 10px; left:auto; top: 50%; margin: -16px 0 0; transform: none;}
+
+  .prodetail_sec h3{ font-size: 14px; line-height: 20px; margin: 10px 0;}
+  .prodetail_sec .filterbox .bagbtn{ width: 200px;}
+
+  .cartpage{ padding: 20px 0;}
+  .cartpage h4{ font-size: 16px; line-height: 25px; padding: 0 0 10px;}
+  .cart_listing{ padding: 15px 2%;}
+  .cart_listing .info{ padding: 0 2%;}
+
+  .cart_listing .price{ flex: 2; font-size: 16px; line-height: 20px;}
+  .cart_listing .info h3{ font-size: 14px; line-height: 20px;}
+  .cart_listing .info span{ font-size: 14px;}
+  .cart_listing .info .actions li{ font-size: 14px; padding: 0 5px;}
+
+  .sidebarlist{ margin: 15px 0;}
+  .sidebarlist li{ font-size: 14px; line-height: 20px;}
+}
+
+@media (max-width: 767px){
+  header{ padding: 5px 0 10px;}
+  header .row{ flex-direction: column;}
+  header nav{ margin: 10px 0;}
+  header nav ul li{ font-size: 13px; margin: 0 10px;}
+  .right_header li{ padding: 0 6px;}
+
+  .carowsel_sec .container{ width: 70%;}
+  .product_sec{ flex-direction: column; display: block; padding: 20px 0 0;}
+  .product_sec .box{ float: left; width: 50%; margin-bottom: 15px;}
+  .owl-carousel .owl-prev{ width: 45px; height: 45px; background-size: 45px; left: -55px;}
+  .owl-carousel .owl-next{ width: 45px; height: 45px; background-size: 45px; right: -55px;}
+  .new_carowsel .owl-carousel{ max-width: 70%; margin: 0 auto;}
+  .owl-carousel iframe{ width: 100%;}
+
+  .homeslider{ padding: 10px 0;}
+  .homeslider iframe{ height: 200px; }
+  .homeslider h3{ font-size: 16px; line-height: 20px; margin: 5px 0;}
+  .homeslider .owl-carousel .owl-prev,
+  .homeslider .owl-carousel .owl-next{ right: -35px;}
+
+  .carowsel_sec{ padding: 10px 0;}
+  .whyus_sec{ padding: 15px 0;}
+  .whyus_sec h3{ font-size: 16px; line-height: 22px;}
+  .whyus_sec .col-md-4{ margin: 5px 0;}
+  .fashion_container .large{ width: 100%;}
+  .fashion_container .small{ width: 100%; margin: 10px 0;}
+  .fashion_container .textbox{ height: 150px; margin-bottom: 10px;}
+
+  .new_carowsel{ padding: 15px 0 0;}
+  h3.subtitle{ margin: 0 0 10px;}
+  .category_sec{ padding-top: 20px;}
+  .category_sec .box{ width: 50%; padding-right: 5%; margin-bottom: 10px;}
+  .category_sec .box.mobile{ display: none;}
+  .category_sec .box ul li{ margin-bottom: 5px;}
+  .category_sec .box h3{ font-size: 13px; padding: 0 0 5px; margin: 0 0 10px;}
+
+  .whyus_sec i{ font-size: 30px;}
+  .owl-carousel .owl-prev:after{ font-size: 32px; line-height: 42px; padding: 0 15px;}
+  .owl-carousel .owl-next:after{ font-size: 32px; line-height: 42px; padding: 0 18px;}
+
+  .intersection_sec{ padding: 15px 0;}
+  .intersection_sec h3{ font-size: 14px; margin: 0 0 5px;}
+  .intersection_sec ul li{ font-size: 13px;}
+
+  footer{ padding: 10px 0; text-align: center;}
+  footer p{ font-size: 13px; line-height: 18px; margin: 0 0 10px;}
+  footer .text-right{ text-align: center;}
+  footer .cards{ margin: 0 0 10px;}
+  footer .cards li a{ width: 50px; height: 34px; background-size: 335px;}
+  footer .cards li .master{ background-position: -57px 0px;}
+  footer .cards li .american{ background-position: -114px 0;}
+  footer .cards li .discover{ background-position: -171px 0;}
+  footer .cards li .rupay{ background-position: -228px 0;}
+  footer .cards li .paypal{ background-position: -285px 0;}
+
+  .breadcrumb{ margin: 10px 0; font-size: 13px;}
+  #newslider iframe{ height: 200px;}
+  .slider_info{ padding: 10px 0 10px;}
+  .slider_info h4{ font-size: 14px; line-height: 20px; padding-right: 85px;}
+  #newslider .carousel-control.left{ width: 35px; height: 35px; background-size: 35px; right: 45px; bottom: -40px;}
+  #newslider .carousel-control.right{ width: 35px; height: 35px; background-size: 35px;  bottom: -40px;}
+
+  .comment_list li{ margin-bottom: 10px;}
+  .comment_list li .content span{ font-size: 13px;}
+  .comment_list li .content p{ font-size: 13px; line-height: 18px; margin: 0 0 5px;}
+  .comment_list li .content{ width: calc(100% - 50px);}
+  .comment_list li .content p a{ font-size: 14px;}
+
+  .column_thumbnails{ float: left; width: 100%; margin: 0 0 15px;}
+  .column_thumbnails li{ float: left;}
+  .column_thumbnails li a{ padding: 5px;}
+  .bx-wrapper .bx-controls-direction .bx-prev{ left: 10px; top: 50%; margin: -16px 0 0; transform: none;}
+  .bx-wrapper .bx-controls-direction .bx-next{ right: 10px; left:auto; top: 50%; margin: -16px 0 0; transform: none;}
+
+  .prodetail_sec h3{ font-size: 14px; line-height: 20px; margin: 10px 0;}
+  .prodetail_sec .filterbox{ margin: 15px 0; padding: 10px 0;}
+  .prodetail_sec .filterbox .bagbtn{ width: 180px;}
+  .prodetail_sec h5{ font-size: 14px; margin: 0 0 5px;}
+  .prodetail_sec p{ font-size: 13px;}
+
+  .similarProduct{ margin: 10px 0 0;}
+
+  .cartpage{ padding: 10px 0;}
+  .cartpage h4{ font-size:15px; line-height: 20px; padding: 0 0 10px; font-weight: 400;}
+  .cart_listing{flex-wrap: wrap; padding: 10px 0;}
+  .cart_listing:last-child{ margin-bottom: 15px;}
+  .cart_listing .info{ padding: 0 0 0 2%;}
+  .cart_listing .info h3{ font-size: 14px; line-height: 18px;}
+  .cart_listing .info span{ font-size: 13px; line-height: 18px;}
+  .cart_listing .price{ flex: 1 1 100%; font-size: 15px; padding: 0 0 0 30%; line-height: 20px; text-align:left;}
+  .cart_listing .price p{ display: inline-block;}
+
+  .cart_listing .info .actions li{ font-size: 13px; padding: 0 5px;}
+
+  .sidebarlist{ margin: 10px 0;}
+  .sidebarlist li{ font-size: 14px; line-height: 20px;}
+  .placeorder-btn{ font-size: 15px; line-height: 20px;}
+  .continue-btn{ font-size: 15px; margin: 10px 0;}
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
