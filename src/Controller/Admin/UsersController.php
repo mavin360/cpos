@@ -125,4 +125,14 @@ class UsersController extends AppController
 		}
 		die;
 	}
+	
+	/* ============Users And Role Management.============= */
+	
+	public function index(){
+		
+		
+	}
+	
+	
+	
 }

@@ -77,8 +77,8 @@ $cakeDescription = 'CPOS';
 				<li class="<?php if($cnt=='Dashboard' && $action=='index'){echo 'active';}?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/dashboard"><i class="fa fa-home"></i> <span>Dashboard</span></a></li>
 				
 				<li class="nav-parent <?php echo (strtolower($cnt)=='stores' || (strtolower($cnt)=='users' && $action=='companyProfile'))?'active nav-active':'';?>">
-					<a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores" class="dropdown-toggle" >
-					  <i class="fa fa-globe"></i>
+					<a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup" class="dropdown-toggle" >
+					  <i class="fa fa-gears"></i>
 					  <span>Setup</span>
 					</a>
 					

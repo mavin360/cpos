@@ -63,4 +63,9 @@ class DashboardController extends AppController
 		$this->viewBuilder()->setLayout('admin');
 		//pr($this->Auth->user());
     }
+	
+	public function setup()
+    {
+		$this->viewBuilder()->setLayout('admin');
+    }
 }

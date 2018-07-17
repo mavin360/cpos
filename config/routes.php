@@ -83,7 +83,7 @@ Router::prefix('admin', function ($routes) {
     // And have the prefix => admin route element added.
 	$routes->connect('/', ['controller' => 'Users', 'action' => 'signin']);
 	$routes->connect('/company-profile', ['controller' => 'Users', 'action' => 'companyProfile']);
-	//$routes->connect('/signup', ['controller' => 'Users', 'action' => 'signup']);
+	$routes->connect('/setup', ['controller' => 'Dashboard', 'action' => 'setup']);
 	$routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout']);
     $routes->fallbacks(DashedRoute::class);
 });
