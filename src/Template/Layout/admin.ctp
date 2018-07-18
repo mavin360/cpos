@@ -81,12 +81,6 @@ $cakeDescription = 'CPOS';
 					  <i class="fa fa-gears"></i>
 					  <span>Setup</span>
 					</a>
-					
-				<ul class="dropdown-menu children">
-					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='index')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores"><i class="fa fa-caret-right"></i>Stores</a></li>
-					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='brands')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/brands"><i class="fa fa-caret-right"></i>Brands/Revenue Centers</a></li>
-					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='orderTypes')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/order-types"><i class="fa fa-caret-right"></i>Order Types</a></li>
-				</ul>	
 		  </li>
 		  <li class="<?php if($cnt=='Pos' && $action=='index'){echo 'active';}?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>pos">POS</span></a></li>
 		</ul>

@@ -1,25 +1,23 @@
 <?php //extract($pageVar); 
 $storeData=$store->toArray();
 ?>
-
+<div class="pageheader">
+	<ol class="breadcrumb">
+	  <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup">Setup</a></li>
+	  <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Location</a></li>
+	  <li class="active"> View Store</li>
+	</ol>
+</div>
 <section class="content">
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
-		  <div class="panel-btns">
-			<a href="" class="panel-close">×</a>
-			<a href="" class="minimize">−</a>
-		  </div><!-- panel-btns -->
-		  <h3 class="panel-title">View store details</h3>
-		</div>
-			 <div class="panel-body ">
-         <div class="form-group col-sm-6">
-        <label class="col-sm-6 control-label">Store ID : </label>
-        <div class="col-sm-6">
-          <?=$storeData['store_id']?>
-       </div>
-     </div>
+		  <h3 class="panel-title">View store
+		  <?php echo $this->Html->link(__('Stores List', true), array('action' => 'index'),array('class'=>'btn btn-primary pull-right')); ?>
+		  </h3>
+		  </div>
+	<div class="panel-body ">
        <div class="form-group col-sm-6">
         <label class="col-sm-6 control-label">Store Name : </label>
         <div class="col-sm-6">

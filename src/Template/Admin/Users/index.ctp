@@ -109,8 +109,9 @@
 
 <script>
 function addRole(){
-	//$('#add_popup').modal('show');
+	$('#loader').removeClass('hide');
 	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/users/add-role',function(data){
+			$('#loader').addClass('hide');
 			 $('#add_popup #cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Add Role');
@@ -118,16 +119,18 @@ function addRole(){
 }
 
 function addUser(){
-	//$('#add_popup').modal('show');
+	$('#loader').removeClass('hide');
 	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/users/add',function(data){
+			$('#loader').addClass('hide');
 			 $('#add_popup #cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Add User');
 	});
 }
 function editUser(id){
-	//$('#add_popup').modal('show');
+	$('#loader').removeClass('hide');
 	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/users/edit/'+id,function(data){
+			 $('#loader').addClass('hide');
 			 $('#add_popup #cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Edit Role');

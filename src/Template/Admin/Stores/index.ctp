@@ -1,6 +1,21 @@
-<?php ?>
-
+<?php $cnt=$this->request->getParam('controller');
+		$action=$this->request->getParam('action');
+?>
+<div class="pageheader">
+        <ol class="breadcrumb">
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup">Setup</a></li>
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Location</a></li>
+          <li class="active">Stores</li>
+        </ol>
+  </div>
 <section class="content">
+	 <ul class="nav nav-tabs" role="tablist">
+	  <li><a class="btn btn-primary" href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup"><i class="fa fa-arrow-left"></i>Back</a></li>
+					<li class="<?php echo (strtolower($cnt)=='stores' && $action=='index')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Stores</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='brands')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/brands">Brands/Revenue Centers</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='orderTypes')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/order-types">Order Types</a></li>
+	  </ul>
+		
 		<div class="panel panel-default">
 			<div class="panel-heading">
 		  <h3 class="panel-title">List of stores 

@@ -1,17 +1,20 @@
 <?php //extract($pageVar); // pr($this->request->data); ?>
-
+<div class="pageheader">
+        <ol class="breadcrumb">
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup">Setup</a></li>
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Location</a></li>
+          <li class="active"> Edit Store</li>
+        </ol>
+  </div>
 <section class="content">
 	<div class="row">
-		
 		<div class="col-xs-12">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-		  <nav class="top-breadcrumb">
-          <?php echo $this->Html->link(__('<< Back', true), array('action' => 'index'),array('class'=>'')); ?>
-			</nav>
-		</div>
-		</div>
 			<div class="panel panel-default">
+			<div class="panel-heading">
+		  <h3 class="panel-title">Edit store
+		  <?php echo $this->Html->link(__('Stores List', true), array('action' => 'index'),array('class'=>'btn btn-primary pull-right')); ?>
+		  </h3>
+		</div>
 			 <div class="panel-body ">
 		<?php echo $this->Form->create($store,array('id'=>'AddStore','class'=>'form-horizontal form-bordered','enctype' => 'multipart/form-data','onsubmit'=>'savedata();return false;')); ?>
         

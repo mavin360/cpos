@@ -1,7 +1,21 @@
-<?php //pr($StoresOrderTypes);?>
-
+<?php $cnt=$this->request->getParam('controller');
+		$action=$this->request->getParam('action');
+?>
+<div class="pageheader">
+        <ol class="breadcrumb">
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup">Setup</a></li>
+          <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Location</a></li>
+          <li class="active">Order Types</li>
+        </ol>
+  </div>
 
 <section class="content">
+ <ul class="nav nav-tabs" role="tablist">
+ <li><a class="btn btn-primary" href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup"><i class="fa fa-arrow-left"></i>Back</a></li>
+					<li class="<?php echo (strtolower($cnt)=='stores' && $action=='index')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Stores</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='brands')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/brands">Brands/Revenue Centers</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='orderTypes')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/order-types">Order Types</a></li>
+	  </ul>
 		<div class="panel panel-default">
 			<div class="panel-heading">
 		  <h3 class="panel-title">Order Types
@@ -89,8 +103,10 @@
 <script>
 function addOrdTyp()
 {
+	$('#loader').removeClass('hide');
 	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/add-order-type',function(data){
-			  $('#add_popup').find('#cont').html(data);
+			$('#loader').addClass('hide');
+			$('#add_popup').find('#cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Add Order Type');
 	});
@@ -98,7 +114,9 @@ function addOrdTyp()
 
 function editOrdTyp(id)
 {
+	$('#loader').removeClass('hide');
 	$.get('<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/edit-order-type/'+id,function(data){
+		$('#loader').addClass('hide');
 			  $('#add_popup').find('#cont').html(data);
 			 $('#add_popup').modal('show');
 			 $('#add_popup').find('.modal-title').html('Edit Order Type');
