@@ -48,8 +48,6 @@ $cakeDescription = 'CPOS';
 <body class="horizontal-menu"> 
 <section>
   <div class="leftpanel">
-   
-	
       <?php 
 		$cnt=$this->request->getParam('controller');
 		$action=$this->request->getParam('action');

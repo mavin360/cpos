@@ -1,13 +1,7 @@
 <?php $cnt=$this->request->getParam('controller');
 	$action=$this->request->getParam('action');
 ?>
-<div class="pageheader">
-	 <ol class="breadcrumb">
-	  <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/setup">Setup</a></li>
-	  <li><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Location</a></li>
-	  <li class="active">Brands/Revenue Centers</li>
-	</ol>
-</div>
+
   
 <section class="content">
  <ul class="nav nav-tabs" role="tablist">

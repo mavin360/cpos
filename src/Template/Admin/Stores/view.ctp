@@ -1,5 +1,7 @@
 <?php //extract($pageVar); 
 $storeData=$store->toArray();
+$cnt=$this->request->getParam('controller');
+		$action=$this->request->getParam('action'); 
 ?>
 <div class="pageheader">
 	<ol class="breadcrumb">
@@ -9,6 +11,12 @@ $storeData=$store->toArray();
 	</ol>
 </div>
 <section class="content">
+<ul class="nav nav-tabs" role="tablist">
+	  <li><a class="btn btn-primary" href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores"><i class="fa fa-arrow-left"></i>Back</a></li>
+					<li class="<?php echo (strtolower($cnt)=='stores' && $action=='view')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores">Stores</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='brands')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/brands">Brands/Revenue Centers</a></li>
+					  <li class="<?php echo (strtolower($cnt)=='stores' && $action=='orderTypes')?'active':'';?>"><a href="<?php echo $this->request->getAttribute("webroot"); ?>admin/stores/order-types">Order Types</a></li>
+	  </ul>
 	<div class="row">
 		<div class="col-xs-12">
 			<div class="panel panel-default">
